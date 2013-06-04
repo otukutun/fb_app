@@ -26,36 +26,7 @@ foreach ($problems as $problem) {
         $res[$i] = api_req_post("http://n0.x0.to/rsk/moridai/answer_check.json",'user_id='. $_SESSION['fb_id'] . '&question_id='. $problem['id'] .'&category_id=' . $problem['category_id'] . '&answer_flag=' . $problems[$i]['answer_flg'] . '&answer_option=' . $problem['choice']. '&answer_type=1');
         $i++;
 }
-?>
-<!DOCTYPE html>
-<html lang="ja">
-<head>
-    <meta charset="utf-8">
-    <title><?php echo TITLE; ?></title>
-    <meta name="keywords" content="">
-    <meta name="description" content="">
-</head>
-<body>
-<?php
 $num = 1;
 $sum = 0;
-//var_dump($res);
-//var_dump($problems);
+require('templates/test_result.php');
 ?>
-<?php foreach($problems as $problem): ?>
-<?php echo $num; ?>番の
-結果→<?php echo $problem['result']; ?><br />
-正解は<?php echo $problem['answer']; ?>番です。<br />
-<?php $num++; ?>
-<?php endforeach; ?>
-<?php if ($sum >= 8): ?>
-合格しました。
-<?php else: ?>
-不合格です。また挑戦してください！
-<?php endif; ?>
-<br />
-<a href="index.php">トップページへ</a>
-|
-<a href="logout.php">logout</a>
-</body>
-</html>

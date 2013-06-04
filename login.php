@@ -32,8 +32,12 @@ if (!$_SESSION['fb_token']) {
 
                 if ($num == 0) {//未登録の場合
                         $value = add_user($dbh,$user['id'],$user['name']);
-                        $url = 'http://n0.x0.to/rsk/moridai/useradd.json?user_name="' . $user['name'] . '"?facebook_id="' . $user['id'] . '"';
-                        $response = api_req($url);
+                        //$url = 'http://n0.x0.to/rsk/moridai/useradd.json?user_name="' . $user['name'] . '"?facebook_id="' . $user['id'] . '"';
+                        $response = api_req_post("http://n0.x0.to/rsk/moridai/useradd.json",'user_name="'. $user['name'] . '"&facebook_id="'. $user['id'] .'"'    );
+                        if ($response['response'] == 'Error' || $response['response'] == 'Data is Empty') {
+                                //echo '登録されませんでした。もう一度お試しください。';
+                                $message =  '登録されませんでした。もう一度お試しください。';
+                        }
                 }
                 header("Location:" . DEV_URL ."/fb_app/index.php");
         }
