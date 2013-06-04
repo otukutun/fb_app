@@ -48,11 +48,12 @@ var_dump($num);
 var_dump($response);
 ?>
 <br />
-<a href="quiz.php?category=1">カテゴリ1</a><br />
-<a href="quiz.php?category=2">カテゴリ2</a><br />
-<a href="quiz.php?category=3">カテゴリ3</a><br />
-<a href="quiz.php?category=4">カテゴリ4</a><br />
-<a href="quiz.php?category=5">カテゴリ5</a><br />
+<a href="quiz.php?category=1">食</a><br />
+<a href="quiz.php?category=2">名所</a><br />
+<a href="quiz.php?category=3">方言</a><br />
+<a href="quiz.php?category=4">偉人</a><br />
+<a href="quiz.php?category=5">産業</a><br />
+<a href="quiz.php?category=6">その他</a><br />
 <br />
 <a href="test.php">試験に挑戦する</a>
 <a href="logout.php">logoutする</a>
