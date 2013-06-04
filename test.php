@@ -7,6 +7,11 @@ if (!isset($_SESSION['fb_token'])) {
         header("Locaion:" . DEV_URL . '/fb_app/index.php');
         exit;
 }
+$tests = api_req("http://n0.x0.to/rskweb/moridai/test.json");
+if ($tests['response'] == 'Data is Empty') {
+        $message =  "テストデータが取得出来ません。。";
+        //exit;
+}
 ?>
 <!DOCTYPE html>
 <html lang="ja">
@@ -17,13 +22,12 @@ if (!isset($_SESSION['fb_token'])) {
     <meta name="description" content="">
 </head>
 <body>
+<?php if (isset($message)): ?>
+<?php echo $message; ?>
+<?php exit; ?>
+<?php endif; ?>
 <h1>試験問題に挑戦</h1>
 <?php 
-$tests = api_req("http://n0.x0.to/rskweb/moridai/test.json");
-if ($tests['response'] == 'Data is Empty') {
-        echo "テストデータが取得出来ません。。";
-        //exit;
-}
 $num = 1;
 ?>
 
@@ -37,7 +41,9 @@ $num = 1;
 <li><label><input type="radio" name="problem[<?php echo $num; ?>][choice]" value="2" /><?php echo $question['MoridaiQuestion']['option2']; ?></label></li>
 <li><label><input type="radio" name="problem[<?php echo $num; ?>][choice]" value="3" /><?php echo $question['MoridaiQuestion']['option3']; ?></label></li>
 <li><label><input type="radio" name="problem[<?php echo $num; ?>][choice]" value="4" /><?php echo $question['MoridaiQuestion']['option4']; ?></label></li>
-<input type="hidden" value="<?php echo $question['MoridaiQuestion']['right_answer']; ?>" name="problem[<?php echo $num; ?>][answer]" >
+<input type="hidden" value="<?php echo $question['MoridaiQuestion']['id']; ?>" name="problem[<?php echo $num; ?>][id]" />
+<input type="hidden" value="<?php echo $question['MoridaiQuestion']['right_answer']; ?>" name="problem[<?php echo $num; ?>][answer]" />
+<input type="hidden" value="<?php echo $question['MoridaiQuestion']['category_id']; ?>" name="problem[<?php echo $num; ?>][category_id]" />
 </ul>
 <br />
 <?php $num++; ?>

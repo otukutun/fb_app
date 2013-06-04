@@ -9,6 +9,22 @@ function api_req($uri) {
         }
 
 }//api_req
+
+function api_req_post($url,$data) {
+        $header = array(
+                "Content-Type: application/x-www-form-urlencoded",
+                "Content-Length: ".strlen($data)
+        );
+        $context = array(
+                "http" => array(
+                        "method"  => "POST",
+                        "header"  => implode("\r\n", $header),
+                        "content" => $data
+                )
+        );
+         return json_decode(file_get_contents($url, false, stream_context_create($context)),true);
+}//api_req_post
+
 function confirm_result($choice,$correct_answer) {
         if ($choice == $correct_answer) {
                 return '正解';

@@ -3,6 +3,7 @@ session_start();
 include('eden.php');
 require_once('config.php');
 require_once('func.php');
+require_once('db_func.php');
 ?>
 <!DOCTYPE html>
 <html lang="ja">
@@ -32,8 +33,19 @@ $user = $graph->getUser();
 var_dump($user['name']);
 var_dump($user['id']);
 //$graph->getLogoutUrl();
-$post = $graph->post('test');
-$post->create('testtest');
+$dbh = connect_db();
+$num = check_registed_user($dbh,$user['id']);
+
+if ($num == 0) {//未登録の場合
+        $value = add_user($dbh,$user['id'],$user['name']);
+        $response = api_req_post("http://n0.x0.to/rsk/moridai/useradd.json",'user_name="'. $user['name'] . '"&facebook_id="'. $user['id'] .'"');
+        //$response = api_req($url);
+        if ($response['response'] == 'Error' || $response['response'] == 'Data is Empty') {
+                echo '登録されませんでした。もう一度お試しください。';
+        }
+}
+var_dump($num);
+var_dump($response);
 ?>
 <br />
 <a href="quiz.php?category=1">カテゴリ1</a><br />
