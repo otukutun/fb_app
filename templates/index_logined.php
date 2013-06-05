@@ -1,19 +1,42 @@
 <?php ob_start(); ?>
-<h1>もりけん５級問題にようこそ</h1>
+<h1 id="top_message"><?php echo $user['name']; ?>さん、ようこそ</h1>
 <?php
-//echo $_SESSION['fb_token'];
-var_dump($user['name']);
-var_dump($user['id']);
+//var_dump($user['name']);
+//var_dump($user['id']);
 ?>
 <br />
-<a href="quiz.php?category=1">食</a><br />
-<a href="quiz.php?category=2">名所</a><br />
-<a href="quiz.php?category=3">方言</a><br />
-<a href="quiz.php?category=4">偉人</a><br />
-<a href="quiz.php?category=5">産業</a><br />
-<a href="quiz.php?category=6">その他</a><br />
+<div class="row">
+<div class="span3 category">
+<a href="quiz.php?category=1"><img src='img/shoku_button2.png'></a><br />
+</div>
+<div class="span3">
+<a href="quiz.php?category=2"><img src='img/meisho_button.png'></a><br />
+</div>
+<div class="span3">
+<a href="quiz.php?category=3"><img src='img/hougen_button.png'></a><br />
+</div>
+</div><!-- row -->
+<div class="row "id="second-line">
+<div class="span3">
+<a href="quiz.php?category=4"><img src='img/ijin_button.png'></a><br />
+</div>
+<div class="span3">
+<a href="quiz.php?category=5"><img src='img/sangyou_button.png'></a><br />
+</div>
+<div class="span3">
+<a href="quiz.php?category=6"><img src='img/sonota_button.png'></a><br />
+</div>
+</div><!-- row -->
 <br />
-<a href="test.php">試験に挑戦する</a>
-<a href="logout.php">logoutする</a>
+<hr />
+<div class="row">
+    <div class="span3" id="button_line">
+        <a href="test.php"><img src='img/test_button5.png'></a>
+    </div>
+    <div class="span3"></div>
+    <div class="span3">
+        <a href="logout.php"><img src='img/logout_button2.png'></a>
+    </div>
+</div><!-- row-->
 <?php $content = ob_get_clean(); ?>
 <?php include 'layout.php'; ?>

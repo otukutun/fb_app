@@ -1,10 +1,16 @@
 <?php ob_start(); ?>
-<h1>試験問題に挑戦</h1>
+<div class="row">
+    <div class="span1">
+    </div>
+    <div class="span11">
+<h1>試験問題</h1>
 <form action="test_result.php" method="POST">
 <?php foreach ($tests['response'] as $question): ?>
-<fieldset>
-問題<?php echo $num; ?><br />
-設問文:<?php echo $question['MoridaiQuestion']['question']; ?>
+<p>
+<span>
+問題<?php echo $num; ?>
+:<?php echo $question['MoridaiQuestion']['question']; ?>
+</span>
 <ul style="list-style-type:none;">
 <li><label><input type="radio" name="problem[<?php echo $num; ?>][choice]" value="1" /><?php echo $question['MoridaiQuestion']['option1']; ?></label></li>
 <li><label><input type="radio" name="problem[<?php echo $num; ?>][choice]" value="2" /><?php echo $question['MoridaiQuestion']['option2']; ?></label></li>
@@ -15,14 +21,13 @@
 <input type="hidden" value="<?php echo $question['MoridaiQuestion']['category_id']; ?>" name="problem[<?php echo $num; ?>][category_id]" />
 </ul>
 <br />
+</p>
 <?php $num++; ?>
-</fieldset>
 <?php endforeach; ?>
-<input type="submit" name="result"value="解答" />
+<input type="submit" name="result"value="解答" class="btn btn-primary btn-large"/>
 </form>
 <br />
-<a href="index.php">トップページへ</a>
-|
-<a href="logout.php">logout</a>
+</div>
+</div>
 <?php $content = ob_get_clean(); ?>
-<?php include('layout.php'); ?>
+<?php include('layout_test.php'); ?>
