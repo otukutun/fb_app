@@ -5,11 +5,11 @@ require_once('config.php');
 require_once('func.php');
 require_once('db_func.php');
 if (!isset($_SESSION['fb_token']) || !isset($_SESSION['fb_id'])) {
-        header("Locaion:" . URL . '/fb_app/index.php');
+        header("Locaion:" . REDIRECT_URL . 'index.php');
         exit;
 }
 if (!isset($_GET['category'])) {
-        header("Locaion:" . URL . '/fb_app/index.php');
+        header("Locaion:" . REDIRECT_URL . 'index.php');
         exit;
 }
 $res = api_req("http://n0.x0.to/rskweb/moridai/question.json?user_id=" .$_SESSION['fb_id'] . "&category_id=" . $_GET['category']);

@@ -8,7 +8,7 @@ require_once('db_func.php');
 if (!$_SESSION['fb_token']) {
 
         //get auth
-        $auth = eden('facebook')->auth(FB_APP_ID, FB_APP_KEY, URL . '/fb_app/login.php');
+        $auth = eden('facebook')->auth(FB_APP_ID, FB_APP_KEY, REDIRECT_URL . 'login.php');
 
         //if no code and no session
         if(!isset($_GET['code']) && !isset($_SESSION['fb_token'])) {
@@ -39,7 +39,7 @@ if (!$_SESSION['fb_token']) {
                                 $message =  '登録されませんでした。もう一度お試しください。';
                         }
                 }
-                header("Location:" . URL ."/fb_app/index.php");
+                header("Location:" . REDIRECT_URL ."index.php");
         }
 }
 ?>

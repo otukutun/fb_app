@@ -4,6 +4,6 @@
 session_start();
 $_SESSION = array();
 session_destroy();
-header('Location:'. URL . '/fb_app/index.php');
+header('Location:'. REDIRECT_URL . 'index.php');
 exit;
 ?>
