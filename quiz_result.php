@@ -5,15 +5,15 @@ require_once('config.php');
 require_once('func.php');
 require_once('db_func.php');
 if (!isset($_SESSION['fb_token']) || !isset($_SESSION['fb_id'])) {
-        header("Locaion:" . DEV_URL . '/fb_app/index.php');
+        header("Locaion:" . URL . '/fb_app/index.php');
         exit;
 }
 if (!isset($_POST['submit'])) {
-        header("Locaion:" . DEV_URL . '/fb_app/index.php');
+        header("Locaion:" . URL . '/fb_app/index.php');
         exit;
 }
 if (!isset($_POST['choice']) || !isset($_POST['answer'])) {
-        header("Locaion:" . DEV_URL . '/fb_app/index.php');
+        header("Locaion:" . URL . '/fb_app/index.php');
         exit;
 }
 

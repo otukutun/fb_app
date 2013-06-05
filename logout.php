@@ -4,6 +4,6 @@
 session_start();
 $_SESSION = array();
 session_destroy();
-header('Location:http://192.168.151.131/fb_app/index.php');
+header('Location:'. URL . '/fb_app/index.php');
 exit;
 ?>

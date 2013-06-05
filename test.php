@@ -4,7 +4,7 @@ include('eden.php');
 require_once('config.php');
 require_once('func.php');
 if (!isset($_SESSION['fb_token'])) {
-        header("Locaion:" . DEV_URL . '/fb_app/index.php');
+        header("Locaion:" . URL . '/fb_app/index.php');
         exit;
 }
 $tests = api_req("http://n0.x0.to/rskweb/moridai/test.json");

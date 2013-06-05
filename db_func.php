@@ -5,7 +5,7 @@ require_once('func.php');
 
 function connect_db() {
         try {
-                return new PDO(DEV_DSN,DEV_DB_USER,DEV_DB_PASS);
+                return new PDO(DSN,DB_USER,DB_PASS);
                 //echo 'dbに接続しました';
         } catch (PDOException $e) {
                 echo $e->getMessage();
