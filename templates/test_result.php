@@ -15,7 +15,7 @@
 不合格です。また挑戦してください！
 <?php endif; ?>
 <br />
-<a href="index.php" class="btn btn-primary btn-large">トップページへ</a>
+<a href="index.php"><img src='img/toppage_button.png' / ></a>
 </div><!--span-->
 </div><!--row-->
 <?php $content = ob_get_clean(); ?>

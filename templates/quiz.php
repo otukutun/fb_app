@@ -21,7 +21,7 @@
 <input type="hidden" name="answer" value="<?php echo $res['response'][0]['MoridaiQuestion']['right_answer'];?>"/>
 <input type="hidden" name="category_id" value="<?php echo $res['response'][0]['MoridaiQuestion']['category_id'];?>"/>
 <input type="hidden" name="description" value="<?php echo $res['response'][0]['MoridaiQuestion']['description'];?>"/>
-<input type="submit" name="submit" value="解答" class="btn"/>
+<input type="image" name="submit" value="解答"  src="img/answer_button.png"/>
 </fieldset>
 </form>
 </div>

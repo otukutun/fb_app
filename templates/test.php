@@ -24,7 +24,7 @@
 </p>
 <?php $num++; ?>
 <?php endforeach; ?>
-<input type="submit" name="result"value="解答" class="btn btn-primary btn-large"/>
+<input type="image" name="result"value="解答" src="img/answer_button.png"/>
 </form>
 <br />
 </div>

@@ -25,8 +25,8 @@
           <div class="nav-collapse collapse">
             <ul class="nav">
               <li class="active"><a href="index.php">ホーム</a></li>
-              <li><a href="#about">About</a></li>
-              <li><a href="#contact">Contact</a></li>
+              <!--<li><a href="#about">About</a></li>-->
+              <!--<li><a href="#contact">Contact</a></li>-->
             </ul>
           </div><!--/.nav-collapse -->
         </div>
