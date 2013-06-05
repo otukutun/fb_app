@@ -17,7 +17,7 @@ if (getenv('HOST_NAME') == 'production') {
 define('FB_APP_ID',getenv('FB_APP_ID'));
 define('FB_APP_KEY',getenv('FB_APP_KEY'));
 define('URL','http://morioka-quiz.herokuapp.com/');
-define('REDIRECT_URL','http://morioka-quiz.herokuapp.com/');
+define('REDIRECT_URL',getenv('REDIRECT_URL'));
 define('DSN',getenv('DSN'));
 define('DB_USER',getenv('DB_USER'));
 define('DB_PASS',getenv('DB_PASS'));
