@@ -16,5 +16,10 @@ $res = api_req(API_URL . "question.json?user_id=" . $_SESSION['fb_id'] . "&categ
 if ($res['response'] == 'Data is Empty') {
         $message = '問題が取得出来ませんでした。また時間を置いてからチャレンジしてください。';
 }
+if ($res['response']['MoridaiQuestion']['clear_flag'] == 0) {
+    $answer_log = '未正解の問題です。';
+} else {
+    $answer_log = '正解済みの問題です。';
+}
 require('templates/quiz.php');
 ?>

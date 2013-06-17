@@ -7,6 +7,7 @@
         <?php if (isset($message)): ?>
             <h3><?php echo $message; ?></h3>
         <?php endif; ?>
+<span style="color:red;"> <?php echo $answer_log; ?> </span>
 <form action="quiz_result.php" method="POST">
 <fieldset> 
 <legend style="color:#FFF;">もりけん５級問題</legend>
