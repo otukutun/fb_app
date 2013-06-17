@@ -9,6 +9,5 @@ require_once('func.php');
 $_SESSION = array();
 session_destroy();  
 header("Location:" . REDIRECT_URL ."index.php");
-//header('Location:'. REDIRECT_URL . 'index.php');
 exit;
 ?>

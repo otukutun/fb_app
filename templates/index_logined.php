@@ -1,9 +1,5 @@
 <?php ob_start(); ?>
 <h1 id="top_message"><?php echo $user['name']; ?>さん、ようこそ</h1>
-<?php
-var_dump($_SESSION['test']);
-//var_dump($user['id']);
-?>
 <br />
 <div class="row">
 <div class="span3 category">

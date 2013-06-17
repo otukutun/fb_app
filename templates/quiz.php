@@ -1,6 +1,4 @@
 <?php ob_start(); ?>
-<?php var_dump($message); ?>
-<?php var_dump($res); ?>
 <div class="row">
     <div class="span1">
     </div>

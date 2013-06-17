@@ -2,7 +2,7 @@
 <div class="row">
     <div class="span1">
     </div>
-    <div class="span11">
+    <div class="span11" id="main">
 <h1>試験問題</h1>
 <form action="test_result.php" method="POST">
 <?php foreach ($tests['response'] as $question): ?>

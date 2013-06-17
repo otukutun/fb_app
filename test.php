@@ -7,7 +7,7 @@ if (!isset($_SESSION['fb_token'])) {
         header("Locaion:" . REDIRECT_URL . 'index.php');
         exit;
 }
-$tests = api_req("http://n0.x0.to/rskweb/moridai/test.json");
+$tests = api_req(API_URL . "test.json");
 if ($tests['response'] == 'Data is Empty') {
         $message =  "テストデータが取得出来ません。。";
         require('templates/test_message.php');
