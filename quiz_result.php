@@ -23,6 +23,7 @@ if ($result == '正解') {
 } else {
         $answer_flg = 0;
 }
-$res = api_req_post("http://n0.x0.to/rsk/moridai/answer_check.json",'user_id='. $_SESSION['fb_id'] . '&question_id='. $_POST['question_id'] .'&category_id=' . $_POST['category_id'] . '&answer_flag=' . $answer_flg . '&answer_option=' . $_POST['choice']. '&answer_type=0');
+$res = api_req_post("http://n0.x0.to/rsk/moridai/answer_check.json","user_id=" . $_SESSION['fb_id'] . "&question_id=". $_POST['question_id'] ."&category_id=" . $_POST['category_id'] . "&answer_flag=" . $answer_flg . "&answer_option=" . $_POST['choice']. "&answer_type=0&client_type=facebook");
+var_dump($res);
 require('templates/quiz_result.php');
 ?>

@@ -1,4 +1,6 @@
 <?php ob_start(); ?>
+<?php var_dump($message); ?>
+<?php var_dump($res); ?>
 <div class="row">
     <div class="span1">
     </div>
@@ -10,17 +12,17 @@
 <form action="quiz_result.php" method="POST">
 <fieldset> 
 <legend style="color:#FFF;">もりけん５級問題</legend>
-設問文:<?php echo $res['response'][0]['MoridaiQuestion']['question']; ?><br />
+設問文:<?php echo $res['response']['MoridaiQuestion']['question']; ?><br />
 <ul style="list-style-type: none;">
-<li><label><input type="radio" name="choice" value="1"/><?php echo $res['response'][0]['MoridaiQuestion']['option1']; ?></label></li>
-<li><label><input type="radio" name="choice" value="2"/><?php echo $res['response'][0]['MoridaiQuestion']['option2']; ?></label></li>
-<li><label><input type="radio" name="choice" value="3"/><?php echo $res['response'][0]['MoridaiQuestion']['option3']; ?></label></li>
-<li><label><input type="radio" name="choice" value="4"/><?php echo $res['response'][0]['MoridaiQuestion']['option4']; ?></label></li>
+<li><label><input type="radio" name="choice" value="1"/><?php echo $res['response']['MoridaiQuestion']['option1']; ?></label></li>
+<li><label><input type="radio" name="choice" value="2"/><?php echo $res['response']['MoridaiQuestion']['option2']; ?></label></li>
+<li><label><input type="radio" name="choice" value="3"/><?php echo $res['response']['MoridaiQuestion']['option3']; ?></label></li>
+<li><label><input type="radio" name="choice" value="4"/><?php echo $res['response']['MoridaiQuestion']['option4']; ?></label></li>
 </ul>
-<input type="hidden" name="question_id" value="<?php echo $res['response'][0]['MoridaiQuestion']['id'];?>"/>
-<input type="hidden" name="answer" value="<?php echo $res['response'][0]['MoridaiQuestion']['right_answer'];?>"/>
-<input type="hidden" name="category_id" value="<?php echo $res['response'][0]['MoridaiQuestion']['category_id'];?>"/>
-<input type="hidden" name="description" value="<?php echo $res['response'][0]['MoridaiQuestion']['description'];?>"/>
+<input type="hidden" name="question_id" value="<?php echo $res['response']['MoridaiQuestion']['id'];?>"/>
+<input type="hidden" name="answer" value="<?php echo $res['response']['MoridaiQuestion']['right_answer'];?>"/>
+<input type="hidden" name="category_id" value="<?php echo $res['response']['MoridaiQuestion']['category_id'];?>"/>
+<input type="hidden" name="description" value="<?php echo $res['response']['MoridaiQuestion']['description'];?>"/>
 <input type="image" name="submit" value="解答"  src="img/answer_button.png"/>
 </fieldset>
 </form>

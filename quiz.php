@@ -12,7 +12,7 @@ if (!isset($_GET['category'])) {
         header("Locaion:" . REDIRECT_URL . 'index.php');
         exit;
 }
-$res = api_req("http://n0.x0.to/rskweb/moridai/question.json?user_id=" .$_SESSION['fb_id'] . "&category_id=" . $_GET['category']);
+$res = api_req("http://n0.x0.to/rskweb/moridai/question.json?user_id=" . $_SESSION['fb_id'] . "&category_id=" . $_GET['category']);
 if ($res['response'] == 'Data is Empty') {
         $message = '問題が取得出来ませんでした。また時間を置いてからチャレンジしてください。';
 }
