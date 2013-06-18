@@ -8,7 +8,7 @@ if (!isset($_SESSION['fb_token'])) {
         header("Locaion:" . REDIRECT_URL . 'index.php');
         exit;
 }
-if (!isset($_POST['result'])) {
+if ($_SERVER['REQUEST_METHOD'] != 'POST') {
         header("Locaion:" . REDIRECT_URL . 'index.php');
         exit;
 }
@@ -27,5 +27,5 @@ foreach ($problems as $problem) {
         $i++;
 }
 $num = 1;
-require('templates/test_result.php');
+require('templates/time_attack_result.php');
 ?>

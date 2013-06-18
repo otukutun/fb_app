@@ -29,7 +29,9 @@
     <div class="span3" id="button_line">
         <a href="test.php"><img src='img/test_button5.png'></a>
     </div>
-    <div class="span3"></div>
+    <div class="span3">
+        <a href="time_attack.php"><img src='img/time_attack_button.png'></a>
+    </div>
     <div class="span3">
         <a href="logout.php"><img src='img/logout_button2.png'></a>
     </div>
