@@ -8,17 +8,17 @@
 <?php foreach ($tests['response'] as $question): ?>
 <p>
 <span>
-問題<?php echo $num; ?>
-:<?php echo $question['MoridaiQuestion']['question']; ?>
+問題<?php echo h($num); ?>
+:<?php echo h($question['MoridaiQuestion']['question']); ?>
 </span>
 <ul style="list-style-type:none;">
-<li><label><input type="radio" name="problem[<?php echo $num; ?>][choice]" value="1" /><?php echo $question['MoridaiQuestion']['option1']; ?></label></li>
-<li><label><input type="radio" name="problem[<?php echo $num; ?>][choice]" value="2" /><?php echo $question['MoridaiQuestion']['option2']; ?></label></li>
-<li><label><input type="radio" name="problem[<?php echo $num; ?>][choice]" value="3" /><?php echo $question['MoridaiQuestion']['option3']; ?></label></li>
-<li><label><input type="radio" name="problem[<?php echo $num; ?>][choice]" value="4" /><?php echo $question['MoridaiQuestion']['option4']; ?></label></li>
-<input type="hidden" value="<?php echo $question['MoridaiQuestion']['id']; ?>" name="problem[<?php echo $num; ?>][id]" />
-<input type="hidden" value="<?php echo $question['MoridaiQuestion']['right_answer']; ?>" name="problem[<?php echo $num; ?>][answer]" />
-<input type="hidden" value="<?php echo $question['MoridaiQuestion']['category_id']; ?>" name="problem[<?php echo $num; ?>][category_id]" />
+<li><label><input type="radio" name="problem[<?php echo h($num); ?>][choice]" value="1" /><?php echo h($question['MoridaiQuestion']['option1']); ?></label></li>
+<li><label><input type="radio" name="problem[<?php echo h($num); ?>][choice]" value="2" /><?php echo h($question['MoridaiQuestion']['option2']); ?></label></li>
+<li><label><input type="radio" name="problem[<?php echo h($num); ?>][choice]" value="3" /><?php echo h($question['MoridaiQuestion']['option3']); ?></label></li>
+<li><label><input type="radio" name="problem[<?php echo h($num); ?>][choice]" value="4" /><?php echo h($question['MoridaiQuestion']['option4']); ?></label></li>
+<input type="hidden" value="<?php echo h($question['MoridaiQuestion']['id']); ?>" name="problem[<?php echo h($num); ?>][id]" />
+<input type="hidden" value="<?php echo h($question['MoridaiQuestion']['right_answer']); ?>" name="problem[<?php echo h($num); ?>][answer]" />
+<input type="hidden" value="<?php echo h($question['MoridaiQuestion']['category_id']); ?>" name="problem[<?php echo h($num); ?>][category_id]" />
 </ul>
 <br />
 </p>

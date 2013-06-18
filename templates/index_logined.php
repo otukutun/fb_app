@@ -1,5 +1,5 @@
 <?php ob_start(); ?>
-<h1 id="top_message"><?php echo $user['name']; ?>さん、ようこそ</h1>
+<h1 id="top_message"><?php echo h($user['name']); ?>さん、ようこそ</h1>
 <br />
 <div class="row">
 <div class="span3 category">

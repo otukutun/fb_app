@@ -4,13 +4,13 @@
 <div class="span11">
 <p>
 <span>
-結果→<?php echo $result; ?><br />
+結果→<?php echo h($result); ?><br />
 </span>
 <span>
-正解は<?php echo $_POST['answer']; ?>番です。<br />
+正解は<?php echo h($_POST['answer']); ?>番です。<br />
 </span>
 <span>
-解説は<?php echo $_POST['description']; ?><br />
+解説は<?php echo h($_POST['description']); ?><br />
 </span>
 
 </p>
@@ -21,7 +21,7 @@
 <div class="row">
 <div class="span1"></div>
 <div class="span5">
-<a href="quiz.php?category=<?php echo $_POST['category_id']; ?>"><img src='img/next_button.png' /></a> 
+<a href="quiz.php?category=<?php echo h($_POST['category_id']); ?>"><img src='img/next_button.png' /></a> 
 </div>
 <div class="span6">
 <a href="index.php"><img src='img/toppage_button.png' /></a>

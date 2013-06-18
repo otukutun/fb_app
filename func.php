@@ -37,4 +37,8 @@ function confirm_result($choice,$correct_answer) {
         return '不正解';
     }
 }//confirm_result
+
+function h($str) {//エスケープ処理のやつ
+    return htmlspecialchars($str,ENT_QUOTES,'UTF-8');
+}
 ?>
