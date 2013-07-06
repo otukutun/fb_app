@@ -33,7 +33,7 @@
         <a href="time_attack.php"><img src='img/time_attack_button.png'></a>
     </div>
     <div class="span3">
-        <a href="logout.php"><img src='img/logout_button2.png'></a>
+        <a href="make_quiz.php"><img src='img/post_quiz.png'></a>
     </div>
 </div><!-- row-->
 <?php $content = ob_get_clean(); ?>
