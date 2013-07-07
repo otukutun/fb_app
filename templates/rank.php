@@ -3,7 +3,7 @@
     <div class="span1">
     </div>
     <div class="span11">
-        <h1>タイムアタックランキング</h1>
+        <h1 class="topic-big">タイムアタックランキング</h1>
         <?php if (isset($message)): ?>
             <h3><?php echo h($message); ?></h3>
         <?php endif; ?>

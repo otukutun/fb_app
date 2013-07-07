@@ -3,11 +3,10 @@
     <div class="span1">
     </div>
     <div class="span11">
-        <h1>もりけん問題</h1>
+        <h1 class="topic-big">もりけん問題</h1>
 <span style="color:red;"> <?php echo h($answer_log); ?> </span>
 <form action="post_quiz.php" method="POST">
 <fieldset> 
-<legend style="color:#FFF;">もりけん５級問題</legend>
 <div class="control-group">
 <label class="control-label" for="selectCategory">カテゴリ</label>
 <select name="category" id="selectCategory" required>
