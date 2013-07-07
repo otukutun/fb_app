@@ -6,12 +6,12 @@
         <h1 class="topic-big">Androidアプリサポートページ</h1>
         <div class="row description-block">
               <div class="span11">
-                  <ul>
+                  <ol>
                       <li><a href="#first-guide"><font color="white">はじめてのかた</font></a></li>
                       <li><a href="#quiz-guide"><font color="white">１問だけ解いてみる</font></a></li>
                       <li><a href="#test-guide"><font color="white">テストに挑戦してみる</font></a></li>
                       <li><a href="#make-quiz-guide"><font color="white">問題をつくってみる！</font></a></li>
-                  </ul>
+                  </ol>
               </div>
           </div>
         <div class="span11">
