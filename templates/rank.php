@@ -39,4 +39,4 @@
     </div>
 </div>
 <?php $content = ob_get_clean(); ?>
-<?php include('layout.php'); ?>
+<?php include('layout_test.php'); ?>

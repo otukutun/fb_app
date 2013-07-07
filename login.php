@@ -1,10 +1,7 @@
 <?php
 //start session
 session_start();
-include('eden.php');
-require_once('config.php');
-require_once('func.php');
-require_once('db_func.php');
+require_once('include_func.php');
 if (!$_SESSION['fb_token']) {
 
     //get auth

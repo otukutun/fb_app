@@ -1,13 +1,5 @@
 <?php
-session_start();
-include('eden.php');
-require_once('config.php');
-require_once('func.php');
-require_once('db_func.php');
-if (!isset($_SESSION['fb_token']) || !isset($_SESSION['fb_id'])) {
-        header("Locaion:" . REDIRECT_URL . 'index.php');
-        exit;
-}
+require_once('auth.php');
 $res = api_req(API_URL . "get_ranking.json");
 if ($res['response'] == 'Data is Empty') {
         $message = '問題が取得出来ませんでした。また時間を置いてからチャレンジしてください。';

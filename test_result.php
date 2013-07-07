@@ -1,13 +1,5 @@
 <?php
-session_start();
-include('eden.php');
-require_once('config.php');
-require_once('func.php');
-require_once('db_func.php');
-if (!isset($_SESSION['fb_token'])) {
-        header("Locaion:" . REDIRECT_URL . 'index.php');
-        exit;
-}
+require_once('auth.php');
 if (!isset($_POST['result'])) {
         header("Locaion:" . REDIRECT_URL . 'index.php');
         exit;
