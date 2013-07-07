@@ -3,6 +3,11 @@
 <div class="span1"></div>
 <div class="span11">
 <table class="table">
+<tr>
+<th>問題番号</th>
+<th>結果</th>
+<th>正解番号</th>
+</tr>
 <?php foreach($problems as $problem): ?>
 <tr>
 <td><?php echo h($num); ?>番</td>
