@@ -12,6 +12,30 @@ background-size:cover;
 overflow: auto;
 }
 
+.description {
+font-size:2em;
+line-height:1.2em;
+}
+
+.description-block {
+margin-bottom: 30px;
+}
+
+.topic-big {
+margin-bottom:20px;
+border-bottom:1px solid #999999;
+border-left:10px solid #ff6600;
+line-height:70px;
+padding-left:8px;
+}
+
+.topic-middle {
+margin-bottom:20px;
+margin-top:30px;
+border-bottom: 1px dotted #cccccc;
+border-left:10px solid #0099cc;
+padding:0px 0px 5px 5px;
+}
 .category {
 padding-left: 100px;
 }

@@ -28,6 +28,9 @@
                 <?php if (check_logined($_SESSION['fb_token'])): ?>
                 <li><a href="rank.php">ランキング</a></li>
                 <li><a href="logout.php">ログアウト</a></li>
+                <?php else: ?>
+                <li><a href="support_iphone.php">iPhoneアプリのサポートページ</a></li>
+                <li><a href="support_android.php">Androidアプリのサポートページ</a></li>
                 <?php endif; ?>
             </ul>
           </div><!--/.nav-collapse -->
