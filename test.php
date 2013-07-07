@@ -13,7 +13,6 @@ if ($tests['response'] == 'Data is Empty') {
         require('templates/test_message.php');
         exit;
 } 
-//var_dump($tests['response']);
 $num = 1;
 require('templates/test.php');
 ?>

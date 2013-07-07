@@ -23,7 +23,9 @@ foreach ($problems as $problem) {
         } else {
                 $problems[$i]['answer_flg'] = 0;
         }
-        $res[$i] = api_req_post(API_URL . "answer_check.json",'user_id='. $_SESSION['fb_id'] . '&question_id='. $problem['id'] .'&category_id=' . $problem['category_id'] . '&answer_flag=' . $problems[$i]['answer_flg'] . '&answer_option=' . $problem['choice']. '&answer_type=1');
+        $req = 'user_id='. $_SESSION['fb_id'] . '&question_id='. $problem['id'] .'&category_id=' . $problem['category_id'] . '&answer_flag=' . $problems[$i]['answer_flg'] . '&answer_option=' . $problem['choice']. '&answer_type=1&client_type=facebook';
+        $res[$i] = api_req_post(API_URL . "answer_check.json",$req);
+        //var_dump($res[$i]);
         $i++;
 }
 $num = 1;

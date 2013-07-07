@@ -5,6 +5,7 @@
     <div class="span11" id="main">
 <h1>タイムアタック</h1><h2 id="timer" style="color:red;">90</h2><span style="color:red;">秒で終了します。</span>
 <form action="time_attack_result.php" method="POST" id="time_attack">
+<input type="hidden" value="0" name="time" />
 <?php foreach ($tests['response'] as $question): ?>
 <p>
 <span>

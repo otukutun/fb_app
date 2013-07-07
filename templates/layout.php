@@ -25,8 +25,10 @@
           <div class="nav-collapse collapse">
             <ul class="nav">
               <li class="active"><a href="index.php">ホーム</a></li>
-              <!--<li><a href="#about">About</a></li>-->
-              <!--<li><a href="#contact">Contact</a></li>-->
+                <?php if (check_logined($_SESSION['fb_token'])): ?>
+                <li><a href="rank.php">ランキング</a></li>
+                <li><a href="logout.php">ログアウト</a></li>
+                <?php endif; ?>
             </ul>
           </div><!--/.nav-collapse -->
         </div>

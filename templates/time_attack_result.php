@@ -2,6 +2,9 @@
 <div class="row">
 <div class="span1"></div>
 <div class="span11">
+<?php if (!empty($message)): ?>
+<h2><?php echo $message; ?></h2>
+<?php endif ?>
 <table class="table">
 <?php foreach($problems as $problem): ?>
 <tr>

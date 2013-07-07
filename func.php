@@ -41,4 +41,12 @@ function confirm_result($choice,$correct_answer) {
 function h($str) {//エスケープ処理のやつ
     return htmlspecialchars($str,ENT_QUOTES,'UTF-8');
 }
+
+function check_logined($user_id) {
+    if (isset($user_id)) {
+        return true;
+    } else {
+        return false;
+    }
+}
 ?>
