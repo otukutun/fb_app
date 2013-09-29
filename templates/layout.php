@@ -38,6 +38,13 @@
       </div>
 </div>
 <div class="container" id="main">
+<?php if (!empty($_SESSION['message'])): ?>
+<div class="alert">
+  <button type="button" class="close" data-dismiss="alert">&times;</button>
+<?php echo $_SESSION['message']; ?>
+</div>
+
+<?php endif; ?>
 <?php echo $content; ?>
 </div>
 <div class="container" id="footer">
@@ -50,9 +57,10 @@
         <div class="span3">
             開発者:<a href="https://twitter.com/otukutun">@otukutun</a>
         </div>
-    </div><!--row->
+    </div><!--row-->
 </div><!-- footer -->
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
 </body>
 </html>
+<?php unset($_SESSION['message']);//メッセージを消すよう ?>

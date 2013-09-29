@@ -4,6 +4,7 @@
     </div>
     <div class="span11" id="main">
 <h1 class="topic-big">作成された問題一覧</h1>
+<form>
 <?php foreach ($tests['response'] as $question): ?>
 <p>
 <span>
@@ -14,12 +15,14 @@
 <?php if($question['MoridaiQuestion']['format'] == 'one-choice'): ?>
 <?php //var_dump($question['MoridaiQuestion']); ?>
 正答=>
+<input type="hidden" value="" name=""/>
 <?php echo h($question['MoridaiQuestion']['right_answer']); ?>
 <?php endif; ?>
 <br />
 </p>
 <?php $num++; ?>
 <?php endforeach; ?>
+</form>
 <br />
 </div>
 </div>
