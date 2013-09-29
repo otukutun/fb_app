@@ -8,8 +8,9 @@ $i = 1;
 $sum = 0;
 $problems = $_POST['problem'];
 $problems_count = count($problems);//問題数をカウント
-$pass_line = round($problem_count * 0.7,1);//合格ラインを設定
-
+$pass_line = round($problems_count * 0.7);//合格ラインを設定
+//var_dump($pass_line);
+//var_dump($problems_count);
 //合格不同格を判定
 foreach ($problems as $problem) {
         $problems[$i]['result'] = confirm_result($problem['choice'],$problem['answer']);
