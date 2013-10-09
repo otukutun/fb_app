@@ -19,7 +19,7 @@
 </table>
 <?php if ($sum >= $pass_line): ?>
 <h3 style="color:red;">合格しました。あなたは<?php echo h($sum); ?>/<?php echo h($problems_count); ?>の正解率でした。</h2>
-<h3 style="color:red;">合格おめでとうございます。盛岡検定3級以上を受験しようと考えている方は是非下記の入力フォームより氏名・郵便番号・住所を応募してください。応募いただいた個人情報につきましては盛岡商工会議所に管理していただき盛岡検定の受験要項などの資料送付などに活用させていただきます。希望者は是非応募していただきますようよろしくお願いします。</h2>
+<h3 style="color:red;">合格おめでとうございます。盛岡検定3級を受験しようと考えている方は是非下記の入力フォームより氏名・郵便番号・住所を応募してください。応募いただいた個人情報につきましては盛岡商工会議所に管理していただき盛岡検定の受験要項などの資料送付などに活用させていただきます。希望者は是非応募していただきますようよろしくお願いします。</h2>
 <form action="post_personal_infomation.php" method="POST">
 <label>名前</label><input type="text" name="name" />
 <label>郵便番号</label><input type="text" name="postcode" />
