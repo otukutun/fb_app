@@ -21,7 +21,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="brand" href="index.php">もりけん５級問題</a>
+          <a class="brand" href="index.php">もりおか入門クイズ</a>
           <div class="nav-collapse collapse">
             <ul class="nav">
               <li class="active"><a href="index.php">ホーム</a></li>
