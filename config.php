@@ -1,7 +1,7 @@
 <?php
 
 //共通
-define('TITLE','もりけん５級');
+define('TITLE','もりけん入門クイズ');
 define('API_URL','http://n0.x0.to/rskweb/moridai/');
 //開発環境
 if (getenv('HOST_NAME') == 'development') {
